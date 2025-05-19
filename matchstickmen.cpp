@@ -51,21 +51,22 @@ void MatchstickMen::paintEvent(QPaintEvent* event)
 
         painter.drawPath(eggPath);
 
-        QRadialGradient gradient;
-        gradient.setFocalPoint(start);
-        gradient.setFocalRadius(eggPath.boundingRect().width());
-        gradient.setCenter(end);
-        gradient.setRadius(eggPath.boundingRect().width());
-        QGradientStop stop;
-        stop.first = 0;
-        stop.second = Qt::white;
-        QGradientStop stop1;
-        stop1.first = 1;
-        stop1.second = Qt::black;
-        gradient.setStops(QGradientStops() << stop << stop1);
+        // QRadialGradient gradient;
+        // gradient.setFocalPoint(QPoint(eggPath.boundingRect().center().x(), eggPath.boundingRect().center().y() - 2));
+        // gradient.setFocalRadius(eggPath.boundingRect().width());
+        // gradient.setCenter(eggPath.boundingRect().center());
+        // gradient.setRadius(eggPath.boundingRect().width());
+        // QGradientStop stop;
+        // stop.first = 0;
+        // stop.second = painter.brush().color();
+        // QGradientStop stop1;
+        // stop1.first = 1;
+        // stop1.second = Qt::white;
+        // gradient.setStops(QGradientStops() << stop << stop1);
 
-        painter.setBrush(gradient);
-        painter.drawPath(eggPath);
+        // // painter.setOpacity(1);
+        // painter.setBrush(gradient);
+        // painter.drawPath(eggPath);
 
         painter.restore();
     }
